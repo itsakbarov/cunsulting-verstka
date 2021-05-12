@@ -28,9 +28,11 @@
     justify-content: center;
     align-items: center;
 }
+
 @mixin Title {
     font-weight: 600;
     font-size: 40px;
+
     @media screen and(max-width) {
         font-size: 30px;
     }
