@@ -5,6 +5,9 @@ body {
     margin: 0;
     font-family: 'Montserrat',
         sans-serif;
+        &.fix{
+            overflow: hidden;
+        }
 }
 
 .container {

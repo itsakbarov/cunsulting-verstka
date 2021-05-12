@@ -3,6 +3,10 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+body.fix {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1140px;
   width: 100%;
