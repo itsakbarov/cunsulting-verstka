@@ -102,7 +102,7 @@ body {
     }
 
     .appbar {
-        width: 35%;
+        width: 45%;
         transition: all ease 0.5s;
         height: 100vh;
         background: $secondary-color;
@@ -326,12 +326,19 @@ body {
 
     .service__inner {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
+
+        @media screen and (max-width: 680px) {
+            flex-direction: column
+        }
 
         .inner__left {
             width: 48%;
 
+            @media screen and (max-width: 680px) {
+                width: 100%;
+            }
         }
 
         .inner__right {
@@ -339,6 +346,10 @@ body {
             -webkit-filter: drop-shadow(0px 10px 4px #4a4a4b50);
             filter: drop-shadow(0px 10px 4px #4a4a4b50);
             max-height: 300px;
+
+            @media screen and (max-width: 680px) {
+                width: 100%;
+            }
 
             img {
                 width: 100%;
@@ -411,8 +422,16 @@ body {
     &__inner {
         @include flex;
 
+        @media screen and (max-width: 768px) {
+            flex-direction: column
+        }
+
         .inner__left {
             width: 48%;
+
+            @media screen and (max-width: 768px) {
+                width: 90%;
+            }
 
             img {
                 width: 100%;
@@ -421,6 +440,45 @@ body {
 
         .inner__right {
             width: 48%;
+
+            @media screen and (max-width: 768px) {
+                width: 90%;
+            }
+
+            .content {
+                @include flexWrap;
+
+                &__card {
+                    width: 50%;
+                    margin-bottom: 30px;
+                    display: flex;
+                    align-items: center;
+                           @media screen and (max-width: 485px) {
+                               width: 100%;
+                           }
+                    .card__title {
+                        font-size: 15px;
+                        color: $secondary-color;
+                        width: 65%;
+                    }
+
+                    .img__holder {
+                        width: 60px;
+                        padding: 10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 20px;
+                        height: 60px;
+                        background: $yellow;
+                        border-radius: 8px;
+
+                        img {
+                            width: 80%
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -449,6 +507,15 @@ body {
             @include flex;
             width: 33%;
             margin-bottom: 70px;
+
+            @media screen and(max-width: 680px) {
+                width: 45%;
+            }
+
+            @media screen and(max-width: 475px) {
+                width: 80%;
+                margin: 10px auto;
+            }
 
             &__icon {
                 width: 50px;
@@ -494,9 +561,22 @@ body {
 
     &__content {
         @include flexWrap;
+
+        @media screen and (max-width: 680px) {
+            flex-direction: column
+        }
     }
 
     &__card {
+        @media screen and (max-width: 680px) {
+            margin-bottom: 60px;
+            width: 50%;
+        }
+
+        @media screen and(max-width: 475px) {
+            width: 80%;
+        }
+
         width: 31%;
         background: white;
         padding: 30px;
@@ -513,6 +593,11 @@ body {
             padding: 20px;
             box-sizing: border-box;
             margin: -19% auto 0 auto;
+
+            @media screen and (max-width: 680px) {
+                margin: -25% auto 0 auto;
+
+            }
 
             img {
                 width: 100%;
@@ -595,5 +680,15 @@ body {
         a {
             color: $primary-color
         }
+    }
+}
+
+@media screen and (max-width: 485px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 30px;
     }
 }

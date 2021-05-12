@@ -94,7 +94,7 @@ body {
 }
 
 .header .appbar {
-  width: 35%;
+  width: 45%;
   transition: all ease 0.5s;
   height: 100vh;
   background: #2a5178;
@@ -339,18 +339,36 @@ body {
 
 .service .service__inner {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+}
+
+@media screen and (max-width: 680px) {
+  .service .service__inner {
+    flex-direction: column;
+  }
 }
 
 .service .service__inner .inner__left {
   width: 48%;
 }
 
+@media screen and (max-width: 680px) {
+  .service .service__inner .inner__left {
+    width: 100%;
+  }
+}
+
 .service .service__inner .inner__right {
   width: 48%;
   filter: drop-shadow(0px 10px 4px #4a4a4b50);
   max-height: 300px;
+}
+
+@media screen and (max-width: 680px) {
+  .service .service__inner .inner__right {
+    width: 100%;
+  }
 }
 
 .service .service__inner .inner__right img {
@@ -432,8 +450,20 @@ body {
   align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  .opportunities__inner {
+    flex-direction: column;
+  }
+}
+
 .opportunities__inner .inner__left {
   width: 48%;
+}
+
+@media screen and (max-width: 768px) {
+  .opportunities__inner .inner__left {
+    width: 90%;
+  }
 }
 
 .opportunities__inner .inner__left img {
@@ -442,6 +472,54 @@ body {
 
 .opportunities__inner .inner__right {
   width: 48%;
+}
+
+@media screen and (max-width: 768px) {
+  .opportunities__inner .inner__right {
+    width: 90%;
+  }
+}
+
+.opportunities__inner .inner__right .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.opportunities__inner .inner__right .content__card {
+  width: 50%;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 485px) {
+  .opportunities__inner .inner__right .content__card {
+    width: 100%;
+  }
+}
+
+.opportunities__inner .inner__right .content__card .card__title {
+  font-size: 15px;
+  color: #2a5178;
+  width: 65%;
+}
+
+.opportunities__inner .inner__right .content__card .img__holder {
+  width: 60px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  height: 60px;
+  background: #fde428;
+  border-radius: 8px;
+}
+
+.opportunities__inner .inner__right .content__card .img__holder img {
+  width: 80%;
 }
 
 .features {
@@ -489,6 +567,19 @@ body {
   align-items: center;
   width: 33%;
   margin-bottom: 70px;
+}
+
+@media screen and (max-width: 680px) {
+  .features__content .item {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .features__content .item {
+    width: 80%;
+    margin: 10px auto;
+  }
 }
 
 .features__content .item__icon {
@@ -553,6 +644,12 @@ body {
   flex-wrap: wrap;
 }
 
+@media screen and (max-width: 680px) {
+  .target__content {
+    flex-direction: column;
+  }
+}
+
 .target__card {
   width: 31%;
   background: white;
@@ -563,6 +660,19 @@ body {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
+@media screen and (max-width: 680px) {
+  .target__card {
+    margin-bottom: 60px;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .target__card {
+    width: 80%;
+  }
+}
+
 .target__card .img-holder {
   width: 90px;
   height: 90px;
@@ -571,6 +681,12 @@ body {
   padding: 20px;
   box-sizing: border-box;
   margin: -19% auto 0 auto;
+}
+
+@media screen and (max-width: 680px) {
+  .target__card .img-holder {
+    margin: -25% auto 0 auto;
+  }
 }
 
 .target__card .img-holder img {
@@ -663,4 +779,13 @@ body {
 
 .meetings .copyright a {
   color: #002e5b;
+}
+
+@media screen and (max-width: 485px) {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 30px;
+  }
 }
